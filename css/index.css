@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* Corsp de la page */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Menu de navigation */
+header {
+  width: 100%;
+  height: 60px;
+  background-color: blue;
+  position: sticky;
+  border-bottom: 2px solid white;
+  top: 0;
+}
+/* Le conteneur principal */
+.conteneur-principal {
+  width: 100%;
+  height: auto;
+  background-image: url("img/Behite1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15px 60px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+/* Colonne blanche les informations-principales */
+.informations-principales {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 3px 3px rgba(9, 23, 74, 0.3);
+}
+/* Colonne blue informations secondaires */
+.informations-secondaires {
+  background-color: rgb(9, 23, 74);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 20px;
+  box-shadow: 0px 0px 3px 3px rgba(9, 23, 74, 0.3);
+  border: 2px solid white;
+  color: white;
+}
+
+.competences,
+.centre-interet,
+.profil,
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profil p {
+  line-height: 1.5rem;
+}
+.competences ul,
+.centre-interet ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.competences ul li,
+.centre-interet ul li,
+.formations ul li {
+  margin-left: 20px;
+}
+
+/* Profil: Entete du CV */
+.moi {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* second bloc du profil */
+.moi div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* premier block du profil avec une seul image */
+.moi div:first-child {
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* texte d'information sur moi dans le profil */
+.moi div:last-child p:last-child {
+  line-height: 1.4rem;
+}
+.moi img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.moi .nom {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.moi h2 {
+  font-weight: 400;
+  border-bottom: 1px solid rgb(9, 23, 74);
+  padding: 5px 0;
+}
+
+.experiences,
+.formations,
+.formations ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experiences p:first-child,
+.formations p:first-child {
+  border-bottom: 1px solid rgb(9, 23, 74);
+  padding: 3px 0;
+  font-weight: bold;
+  color: rgb(9, 23, 74);
+}
+
+.formations, .experiences {
+  line-height: 25px;
+}
+
+/* Entete des sections dans la colonne principale */
+.formations .for-ent {
+  background-color: gray;
+  padding: 2px 3px;
+  font-weight: bold;
+}
+
+/* Entete des sections dans la colonne secondaire */
+.informations-secondaires .inf-ent {
+  border-bottom: 1px solid white;
+  padding: 3px 0;
+  font-weight: bold;
+}
+
+/* Menu de navigation */
+header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background-color: rgb(9, 23, 74);
+  background-image: url("img/banner1.jpg");
+  background-size: cover;
+  background-position: center;
+  position: sticky;
+  top: 0;
+}
+
+/* liens dans le menu de navigation */
+header nav {
+  margin-left: auto;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Image du logo */
+header img {
+  width: 40px;
+  border-radius: 5px;
+}
+header .logo {
+  display: flex;
+  color: white;
+  gap: 5px;
+}
+/* Bouton pour le menu de navigation */
+.btn {
+  position: absolute;
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: block;
+  display: none;
+}
+
+/* Premier titre de la page */
+h1 {
+  margin: auto;
+  text-align: center;
+  padding-top: 10px;
+  border-bottom: 5px solid navy;
+  font-size: 1.3rem;
+  background: linear-gradient(to right, red, navy);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 2rem;
+}
+/* Responsive design */
+@media screen and (max-width: 1199px) {
+  /* Affichage sur une seul colonne */
+  .conteneur-principal {
+    grid-template-columns: 1fr;
+    padding: 5px 5px;
+    background-position: center;
+  }
+  .btn {
+    display: block;
+  }
+  .moi {
+    display: flex;
+    flex-direction: column;
+  }
+  .moi div:first-child {
+    background-color: rgb(9, 23, 74);
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .moi h2 {
+    text-align: center;
+  }
+  .moi img {
+    border: 5px solid white;
+  }
+  .moi div:last-child {
+    align-items: center;
+  }
+
+  header nav {
+    display: none;
+  }
+}
+
+.conf {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 33;
+  opacity: 1;
+  animation: pluie 2s linear;
+}
+
+@keyframes pluie {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
