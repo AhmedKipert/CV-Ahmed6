@@ -38,5 +38,5 @@ function createConf() {
 }
 
 for (let i = 0; i < 300; i++) {
-  setTimeout(createConf(), i*10);
+  setTimeout(createConf, i*10);
 }
